@@ -1,0 +1,54 @@
+$color-light: #C8E4B2;
+$color-medium: #9ED2BE;
+$color-dark: #7EAA92;
+
+@mixin box-shadow {
+  box-shadow: 0px 7px 25px 3px rgba(126, 170, 146, 0.75);
+  -webkit-box-shadow: 0px 7px 25px 3px rgba(126, 170, 146, 0.75);
+  -moz-box-shadow: 0px 7px 25px 3px rgba(126, 170, 146, 0.75);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color-medium;
+  padding: 10px;
+}
+
+#editor {
+  background-color: $color-light;
+  @include box-shadow;
+  padding: 5px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+#preview {
+  width: 800px;
+  background-color: $color-light;
+  @include box-shadow;
+  padding: 5px;
+  border: solid 1px black;
+  min-height: 300px;
+}
+
+.toolbar {
+  @include box-shadow;
+  border: solid 1px black;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background-color: $color-dark;
+}
+
+th, td {
+  border: solid 1px black;
+  padding: 5px;
+}
+
+.expanded {
+  min-height: 100vh;
+}
