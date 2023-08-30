@@ -9,17 +9,22 @@ $color-dark: #7EAA92;
 }
 
 .container {
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: $color-medium;
   padding: 10px;
+  box-sizing: border-box;
 }
 
 #editor {
+  max-width: 95vw;
   background-color: $color-light;
   @include box-shadow;
   padding: 5px;
+  box-sizing: border-box;
 
   &:focus {
     outline: none;
@@ -28,11 +33,13 @@ $color-dark: #7EAA92;
 
 #preview {
   width: 800px;
+  max-width: 95vw;
   background-color: $color-light;
   @include box-shadow;
   padding: 5px;
   border: solid 1px black;
   min-height: 300px;
+  box-sizing: border-box;
 }
 
 .toolbar {
