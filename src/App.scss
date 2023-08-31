@@ -20,11 +20,12 @@ $color-dark: #7EAA92;
 }
 
 #editor {
-  max-width: 95vw;
+  max-width: 96vw;
   background-color: $color-light;
   @include box-shadow;
   padding: 5px;
   box-sizing: border-box;
+  overflow: auto;
 
   &:focus {
     outline: none;
@@ -32,14 +33,14 @@ $color-dark: #7EAA92;
 }
 
 #preview {
-  width: 800px;
-  max-width: 95vw;
+  max-width: 96vw;
   background-color: $color-light;
   @include box-shadow;
   padding: 5px;
   border: solid 1px black;
   min-height: 300px;
   box-sizing: border-box;
+  overflow: auto;
 }
 
 .toolbar {
@@ -49,6 +50,7 @@ $color-dark: #7EAA92;
   justify-content: space-between;
   padding: 5px 10px;
   background-color: $color-dark;
+  box-sizing: border-box;
 }
 
 th, td {
